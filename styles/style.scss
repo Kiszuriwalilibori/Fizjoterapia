@@ -519,6 +519,7 @@ body {
   right: 3vw;
   z-index: 2000;
   cursor: pointer;
+  & div{transform: scale(2);}
   
   @media (min-width:768px) {
     display: none;
@@ -689,6 +690,7 @@ body {
 
     &__link{
      color:white;
+     display: inline-block;
      @include hoveringToGreen();
      margin: 0 10px;
      width:24px;
@@ -718,9 +720,41 @@ body {
   }
 
 .bazawiedzy__header { font-size: 1rem; color: $localgreen;}
-
 .phone__text{color: $localgreen;}
-
 .successStyle{@extend .btn; border-color: $localgreen; color: $localgreen}
 .failureStyle{@extend .btn; color: orange;border-color: orange;}
 .message{ @include flexHorizontalCentered;}
+
+
+.bg-slideshow {
+  width: 24px; height: 24px;
+  background: url('../images/details.png') -10px -10px;
+}
+.bg-exit {
+  width: 24px; height: 24px;
+  background: url('../images/details.png') -54px -10px;
+}
+.bg-facebook {
+  width: 24px; height: 24px;
+  background: url('../images/details.png') -10px -54px;
+}
+.bg-hamburger {
+  width: 24px; height: 24px;
+  background: url('../images/details.png') -54px -54px;
+}
+.bg-instagram {
+  width: 24px; height: 24px;
+  background: url('../images/details.png') -98px -10px;
+}
+.bg-intro {
+  width: 24px; height: 24px;
+  background: url('../images/details.png') -98px -54px;
+}
+.bg-location {
+  width: 24px; height: 24px;
+  background: url('../images/details.png') -10px -98px;
+}
+.bg-phone {
+  width: 24px; height: 24px;
+  background: url('../images/details.png') -54px -98px;
+}

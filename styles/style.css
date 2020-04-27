@@ -676,6 +676,11 @@ body {
   cursor: pointer;
 }
 
+.hamburger div {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
 @media (min-width: 768px) {
   .hamburger {
     display: none;
@@ -930,6 +935,7 @@ body {
 
 .footer__link {
   color: white;
+  display: inline-block;
   text-decoration: none;
   -webkit-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
@@ -1003,5 +1009,53 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.bg-slideshow {
+  width: 24px;
+  height: 24px;
+  background: url("../images/details.png") -10px -10px;
+}
+
+.bg-exit {
+  width: 24px;
+  height: 24px;
+  background: url("../images/details.png") -54px -10px;
+}
+
+.bg-facebook {
+  width: 24px;
+  height: 24px;
+  background: url("../images/details.png") -10px -54px;
+}
+
+.bg-hamburger {
+  width: 24px;
+  height: 24px;
+  background: url("../images/details.png") -54px -54px;
+}
+
+.bg-instagram {
+  width: 24px;
+  height: 24px;
+  background: url("../images/details.png") -98px -10px;
+}
+
+.bg-intro {
+  width: 24px;
+  height: 24px;
+  background: url("../images/details.png") -98px -54px;
+}
+
+.bg-location {
+  width: 24px;
+  height: 24px;
+  background: url("../images/details.png") -10px -98px;
+}
+
+.bg-phone {
+  width: 24px;
+  height: 24px;
+  background: url("../images/details.png") -54px -98px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -85,7 +85,7 @@ html(lang ='pl')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible' content='ie=edge')
     link(rel='stylesheet' href='./styles/style.css')
-    link(rel="icon" href="./project_images/foto1.png")
+    link(rel="icon" href="./images/train360.jpg")
     link(href="https://fonts.googleapis.com/css?family=Clicker+Script&display=swap&subset=latin-ext" rel="stylesheet")
     link(href='https://fonts.googleapis.com/css?family=Lato:400,900&display=swap&subset=latin-ext' rel='stylesheet')
     script(src='./jquery.js')
@@ -95,16 +95,16 @@ html(lang ='pl')
    
     title Document
   aside.hamburger
-    img(src = './images/hamburger.svg' alt = 'hamburger')
+    .bg-hamburger
   .header
     .header__image-area
-      img.footer__icon(src='./images/phone.png' alt = 'phone logo')
+      .bg-phone
       a.phone__text(href ='tel:+48668559123')
         span +48 668 559 123
     .header__image-area
       h1.logo Masaże Wiśniewska
     .header__image-area
-      img.footer__icon(src='./images/location.png' alt= 'loaction logo')
+      .bg-location
       span Konia - Kowalskiego 27, 04-454 Warszawa
   .menu(id ="menu")
     span.logo.logo-left Masaże Wiśniewska
@@ -163,16 +163,12 @@ html(lang ='pl')
                 div(id ="status_message")
   .footer
     div
-      a.footer__link(href='#slides')
-        img(src='./images/slideshowwhite.png' alt= 'slide show logo')
-      a.footer__link(href='#intro')
-          img(src='./images/intro.png' alt ='intro logo')
+      a.footer__link.bg-slideshow(href='#slides')
+      a.footer__link.bg-intro(href='#intro')
     span Copyright © All Rights Reserved Piotr Maksymiuk 2019
     div
-      a.footer__link(href='#slides')
-        img.footer__icon(src='./images/facebook.svg' alt ='facebook logo')
-      a.footer__link(href='#intro')
-          img.footer__icon(src='./images/instagram.svg' alt ='instagram logo')
+      a.footer__link.bg-facebook(href='#slides')
+      a.footer__link.bg-instagram(href='#intro')
   
   
   
