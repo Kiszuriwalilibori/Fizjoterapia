@@ -520,7 +520,6 @@ body {
   z-index: 2000;
   cursor: pointer;
   & div{transform: scale(2);}
-  
   @media (min-width:768px) {
     display: none;
   }
@@ -681,7 +680,6 @@ body {
     left:0;
     z-index:1000;
     width:100%; height:60px; 
-    //background-color: #1d201d;
     @include tileBackground();
     background-repeat: repeat;
     color: $localgreen;
@@ -758,3 +756,17 @@ body {
   width: 24px; height: 24px;
   background: url('../images/details.png') -54px -98px;
 }
+
+.emblems-baza, .emblems-dietetyka, .emblems-ergonomia, .emblems-masazsportowy, .emblems-massage, 
+.emblems-onas, .emblems-rehabilitacja, .emblems-rehabilitacjasportowa
+{ max-width: 100%; background-size: 100%; background-image: url('../images/emblems.png'); }
+ 
+.emblems-baza { background-position: 0 0%; background-size: 100%; }
+.emblems-dietetyka { background-position: 0 13.901345%; background-size: 100%; }
+.emblems-ergonomia { background-position: 0 27.802691%; background-size: 100%; }
+.emblems-masazsportowy { background-position: 0 41.704036%; background-size: 100%; }
+.emblems-massage { background-position: 0 55.605381%; background-size: 100%; }
+.emblems-onas { background-position: 0 69.506726%; background-size: 100%; }
+.emblems-rehabilitacja { background-position: 0 83.408072%; background-size: 100%; }
+.emblems-rehabilitacjasportowa { background-position: 0 100%; background-size: 100%; }
+
