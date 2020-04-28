@@ -64,6 +64,12 @@ a:focus {
   outline: none;
 }
 
+@font-face {
+  font-family: Clicker;
+  src: url(Clicker.ttf);
+  font-display: swap;
+}
+
 html {
   font-size: 16px;
 }
@@ -411,7 +417,7 @@ body {
 }
 
 .logo {
-  font-family: 'Clicker Script', cursive;
+  font-family: 'Clicker', cursive;
   font-size: 2.5vw;
   color: #75af28;
 }
