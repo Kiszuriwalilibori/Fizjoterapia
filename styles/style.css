@@ -1105,4 +1105,46 @@ body {
   background-position: 0 100%;
   background-size: 100%;
 }
+
+.page-ergonomy, .page-knowledge, .page-massage, .page-onas, .page-rehab,
+.page-sportmassage, .page-sportrehab {
+  max-width: 100%;
+  background-size: 100%;
+  background-image: url("../images/page.jpg");
+}
+
+.page-ergonomy {
+  background-position: 0 0%;
+  background-size: 100%;
+}
+
+.page-knowledge {
+  background-position: 0 19.284978%;
+  background-size: 100%;
+}
+
+.page-massage {
+  background-position: 0 36.076389%;
+  background-size: 100%;
+}
+
+.page-onas {
+  background-position: 0 53.145411%;
+  background-size: 100%;
+}
+
+.page-rehab {
+  background-position: 0 69.6011%;
+  background-size: 100%;
+}
+
+.page-sportmassage {
+  background-position: 0 83.936955%;
+  background-size: 100%;
+}
+
+.page-sportrehab {
+  background-position: 0 100%;
+  background-size: 100%;
+}
 /*# sourceMappingURL=style.css.map */

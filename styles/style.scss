@@ -770,3 +770,24 @@ body {
 .emblems-rehabilitacja { background-position: 0 83.408072%; background-size: 100%; }
 .emblems-rehabilitacjasportowa { background-position: 0 100%; background-size: 100%; }
 
+.page-ergonomy, .page-knowledge, .page-massage, .page-onas, .page-rehab, 
+.page-sportmassage, .page-sportrehab
+{ max-width: 100%; background-size: 100%; background-image: url('../images/page.jpg'); }
+ 
+.page-ergonomy { background-position: 0 0%; background-size: 100%; }
+.page-knowledge { background-position: 0 19.284978%; background-size: 100%; }
+.page-massage { background-position: 0 36.076389%; background-size: 100%; }
+.page-onas { background-position: 0 53.145411%; background-size: 100%; }
+.page-rehab { background-position: 0 69.6011%; background-size: 100%; }
+.page-sportmassage { background-position: 0 83.936955%; background-size: 100%; }
+.page-sportrehab { background-position: 0 100%; background-size: 100%; }
+
+
+
+// <img class="page-ergonomy" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAscAAAIsAQMAAAAku5YsAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAEZJREFUeNrtwQEBAAAAgiD/r25IQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBow3gAAei8WQ0AAAAASUVORK5CYII=">
+// <img class="page-knowledge" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAscAAAHZAQMAAABQDAQbAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAD9JREFUeNrtwQEBAAAAgiD/r25IQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvBumSgABZ7IynwAAAABJRU5ErkJggg==">
+// <img class="page-massage" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAscAAAH2AQMAAACm9rP4AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAENJREFUeNrtwYEAAAAAw6D5U9/gBFUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM8AsHwAAX8oEewAAAAASUVORK5CYII=">
+// <img class="page-onas" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAscAAAHZAQMAAABQDAQbAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAD9JREFUeNrtwQEBAAAAgiD/r25IQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvBumSgABZ7IynwAAAABJRU5ErkJggg==">
+// <img class="page-rehab" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAscAAAHaAQMAAADWmHa1AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAEBJREFUeNrtwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHgZpqQAAajyugYAAAAASUVORK5CYII=">
+// <img class="page-sportmassage" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAscAAAGQAQMAAAB4W1+/AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAADpJREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgBcDjKAAAd9HQ5wAAAAASUVORK5CYII=">
+// <img class="page-sportrehab" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAscAAAHaAQMAAADWmHa1AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAEBJREFUeNrtwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHgZpqQAAajyugYAAAAASUVORK5CYII=">
