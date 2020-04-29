@@ -70,6 +70,27 @@ a:focus {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Lato';
+  src: url(Lato-Regular.eot);
+  /* IE9 Compat Modes */
+  src: url(Lato-Regular.eot?#iefix) format("embedded-opentype"), url(Lato-Regular.woff) format("woff"), url(Lato-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LatoBlack';
+  src: url(Lato-Black.eot);
+  /* IE9 Compat Modes */
+  src: url(Lato-Black.eot?#iefix) format("embedded-opentype"), url(Lato-Black.woff) format("woff"), url(Lato-Black.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
 html {
   font-size: 16px;
 }
@@ -281,7 +302,7 @@ body {
 .slideshow .slide .title {
   margin: 0 auto 15px;
   max-width: 700px;
-  font: 900 50px/1.2 "Lato", sans-serif;
+  font: 900 50px/1.2 "LatoBlack", sans-serif;
   letter-spacing: 0.1em;
 }
 
@@ -640,7 +661,7 @@ body {
 
 .intro__square--text h2 {
   margin: 15% auto 15%;
-  font: 900 30px/1.2 "Lato", sans-serif;
+  font: 900 30px/1.2 "LatoBlack", sans-serif;
   -webkit-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
 }
@@ -838,6 +859,7 @@ body {
   font-weight: 900;
   font-size: 60px;
   color: black;
+  font-family: 'LatoBlack', sans-serif;
   word-spacing: 8px;
 }
 
@@ -853,7 +875,7 @@ body {
 .page__subtitle--chapteral {
   text-transform: none;
   font-size: 25px;
-  font-weight: 600;
+  font-family: 'LatoBlack', sans-serif;
 }
 
 @media (max-width: 767px) {
