@@ -1,0 +1,41 @@
+
+
+.header {
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include tileBackground();
+    text-align: center;
+    color: $localgreen;
+  
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  
+  
+  .logo {
+    font-family: 'Clicker', cursive;
+    font-size: 2.5vw;
+  
+    @include mobile {
+      font-size: 5vw;
+    }
+  
+    color: $localgreen;
+  }
+  
+  .logo-left {
+    margin-left: $logoHorSpacing;
+  
+    @include mobile {
+      text-align: center;
+      margin-left: 0;
+    }
+  }
+  
+  .header__image-area {
+    @include flexVerticalCentered();
+  }
+  

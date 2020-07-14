@@ -12,10 +12,10 @@
     <link rel='preload' href='./styles/Clicker.ttf' as='font' crossorigin='anonymous'>
     <link rel='preload' href='./styles/Lato-Black.woff' as='font' crossorigin='anonymous'>
     <link rel='preload' href='./styles/Lato-Regular.woff' as='font' crossorigin='anonymous'>
-    <script src="./jquery.js"></script>
-    <script src="./gsap.js" defer></script>
-    <script src="./script.js" defer></script>
-    <script src="./myscript.js" defer></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/gsap.js" defer></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/myscript.js" defer></script>
     <title>Document</title>
 </head>
 <aside class="hamburger">
@@ -63,8 +63,8 @@
                             <source media="(max-width: 640px)" srcset="./images/onas640.jpg" />
                             <source media="(max-width: 1280px)" srcset="./images/onas1280.jpg" />
                             <source media="(max-width: 1440px)" srcset="./images/onas1440.jpg" />
-                            <source media="(max-width: 1920px)" srcset="./images/onas1920.jpg" /><img class="image"
-                                src="./images/onas.JPG" alt="image non-available" /></picture>
+                            <source media="(max-width: 1920px)" srcset="./images/onas1920.jpg" />
+                            <img class="image" src="./images/onas.JPG" alt="image non-available" /></picture>
                     </div>
                 </div>
                 <div class="slide" id="reh">
@@ -699,19 +699,19 @@
             </div>
             <div class="page__column page__column--adresal">
                 <div class="adres">
-                    <form class="adres__form" id="contact-form"><input class="form__input" type="text" name="name"
-                            id="name" placeholder="Imię i Nazwisko" required><input class="form__input" type="email"
-                            name="email" id="email" placeholder="adres email" required
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$"><select class="form__input"
-                            name="Podaj temat" id="subject" required>
-                            <option value="">Wybierz temat:</option>
-                            <option value="info">Informacje o usługach</option>
-                            <option value="rezerwacja">Rezerwacja</option>
-                            <option value="inne">Inne</option>
-                        </select><textarea class="form__input" name="content" id="message"
-                            placeholder="Wpisz treść wiadomości" required></textarea><button
-                            class="btn intro__btn adres__btn" type="submit"> <span
-                                class="btn-inner">Wyślij</span></button>
+                    <form class="adres__form" id="contact-form">
+                        <input class="form__input" type="text" name="name"id="name" placeholder="Imię i Nazwisko" required>
+                        <input class="form__input" type="email" name="email" id="email" placeholder="adres email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$">
+                            <select class="form__input" name="Podaj temat" id="subject" required>
+                                <option value="">Wybierz temat:</option>
+                                <option value="info">Informacje o usługach</option>
+                                <option value="rezerwacja">Rezerwacja</option>
+                                <option value="inne">Inne</option>
+                            </select>
+                            <textarea class="form__input" name="content" id="message"placeholder="Wpisz treść wiadomości" required></textarea>
+                            <button class="btn intro__btn adres__btn" type="submit">
+                                <span class="btn-inner">Wyślij</span>
+                            </button>
                         <div class="message">
                             <div id="status_message"></div>
                         </div>

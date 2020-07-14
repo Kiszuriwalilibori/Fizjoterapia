@@ -1,0 +1,39 @@
+
+@mixin mobile {
+    @media (max-width: #{$breakMobile - 1px}) {
+      @content;
+    }
+  }
+  
+@mixin hoveringToGreen {
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+  
+    &:hover {
+      color: rgb(117, 175, 40);
+    }
+  
+    &:link {
+      text-decoration: none;
+      
+    }
+  }
+  
+  
+  @mixin tileBackground{background-color: #404040;
+    background-image: url("../images/3px-tile.png");
+    background-repeat: repeat;}
+  
+  @mixin getGreen {
+    transition: color 0.3s ease-out;
+      &:hover{color: rgb(117, 175, 40);}
+  }
+  
+  @mixin flexHorizontalCentered{
+    display: flex;
+    justify-content: center;}
+  
+  @mixin flexVerticalCentered{
+    display: flex;
+    align-items: center;}
+  

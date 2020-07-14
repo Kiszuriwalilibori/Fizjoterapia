@@ -91,24 +91,6 @@ a:focus {
   text-rendering: optimizeLegibility;
 }
 
-html {
-  font-size: 16px;
-}
-
-@media (max-width: 767px) {
-  html {
-    font-size: 12px;
-  }
-}
-
-body {
-  font: 14px/2 "Open sans",sans-serif;
-  letter-spacing: 0.05em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
-}
-
 .btn, .successStyle, .failureStyle {
   display: inline-block;
   padding: 13px 20px;
@@ -169,6 +151,24 @@ body {
   border-color: #373737;
   -webkit-transition: border 0.1s linear 0s;
   transition: border 0.1s linear 0s;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  font: 14px/2 "Open sans", sans-serif;
+  letter-spacing: 0.05em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 .slideshow {
@@ -481,6 +481,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -695,6 +697,16 @@ body {
   height: 100%;
 }
 
+.intro__btn {
+  background: #75af28;
+  border-color: #75af28;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .hamburger {
   position: fixed;
   top: 3vw;
@@ -732,16 +744,6 @@ body {
   transition: transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
   will-change: transform;
-}
-
-.intro__btn {
-  background: #75af28;
-  border-color: #75af28;
-  position: absolute;
-  bottom: 15%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 .page {
@@ -1087,8 +1089,14 @@ body {
   background: url("../images/details.png") -54px -98px;
 }
 
-.emblems-baza, .emblems-dietetyka, .emblems-ergonomia, .emblems-masazsportowy, .emblems-massage,
-.emblems-onas, .emblems-rehabilitacja, .emblems-rehabilitacjasportowa {
+.emblems-baza,
+.emblems-dietetyka,
+.emblems-ergonomia,
+.emblems-masazsportowy,
+.emblems-massage,
+.emblems-onas,
+.emblems-rehabilitacja,
+.emblems-rehabilitacjasportowa {
   max-width: 100%;
   background-size: 100%;
   background-image: url("../images/emblems.png");
@@ -1134,8 +1142,14 @@ body {
   background-size: 100%;
 }
 
-.page-ergonomy, .page-knowledge, .page-massage, .page-onas, .page-rehab,
-.page-sportmassage, .page-sportrehab, .page-dieta {
+.page-ergonomy,
+.page-knowledge,
+.page-massage,
+.page-onas,
+.page-rehab,
+.page-sportmassage,
+.page-sportrehab,
+.page-dieta {
   max-width: 100%;
   background-size: 100%;
   background-image: url("../images/page.jpg");

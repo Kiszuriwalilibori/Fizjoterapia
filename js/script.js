@@ -178,7 +178,7 @@ function homeSlideshowParallax(){
   });
 }
 
-$(document).ready(function() {
+$(document).ready(function() { 
  $('.slide').addClass('is-loaded');
 
  $('.slideshow .arrows .arrow').on('click',function(){
@@ -197,7 +197,7 @@ $(document).ready(function() {
   pages.eq(index).addClass('is-active');
 });
 
-/* Lazyloading
+
 $('.slideshow').each(function(){
   var slideshow=$(this);
   var images=slideshow.find('.image').not('.is-loaded');
@@ -206,7 +206,7 @@ $('.slideshow').each(function(){
     var slide=image.closest('.slide');
     slide.addClass('is-loaded');
   });
-*/
+})
 
 var timeout=setTimeout(function(){
   slideshowNext(slideshow,false,true);
