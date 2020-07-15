@@ -1,0 +1,164 @@
+
+
+.page {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: $pageVerticalMargin 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    color: $colorNormal;
+  
+    @include mobile {
+      flex-direction: column
+    }
+  
+    &::after {
+      content: "";
+      height: 4px;
+      width: 50%;
+      position: absolute;
+      left: 0;
+      bottom: -$pageVerticalMargin / 2;
+      border-radius: 1px;
+      background-color: $localgreen;
+      left: 50%;
+      transform: translate(-50%, 0);
+  
+    }
+  
+  
+    &__chapter {
+      margin: 15px 15px 0 $pageItemLeftSpace;
+      text-align: left;
+  
+    };
+  
+    &__motto {
+      margin: 15px 15px 15px $pageItemLeftSpace;
+      text-align: left;
+    };
+  
+    &__subtitle {
+      display: inline-block;
+      color: black;
+      margin: 15px 15px 15px $pageItemLeftSpace;
+      text-transform: uppercase;
+      border-bottom: 2px solid $localgreen;
+  
+      @media (max-width: 600px) {
+        font-size: 10px;
+        padding: 0 8px
+      }
+  
+      ;
+  
+      @include mobile {}
+    }
+  
+    &__column {
+      width: 50%;
+  
+      @include mobile {
+        width: 100%;
+        text-align: center;
+      }
+  
+      .image--small {
+        width: 20%;
+        height: auto;
+        margin: 25% auto 0 auto;
+  
+        img {
+          width: 100%;
+          object-fit: cover;
+          height: 100%;
+          margin: 0 auto;
+        }
+      }
+  
+      .image--large {
+        width: 100%;
+  
+        img {
+          width: 100%;
+          object-fit: cover;
+          height: 100%;
+        }
+  
+        @include mobile {
+          display: none;
+        }
+      }
+  
+    }
+  
+    &__header {
+      position: absolute;
+      top: 5%;
+      left: 0;
+      width: 60%;
+      background-color: transparent;
+      text-align: end;
+      z-index: 500;
+      font-weight: 900;
+      font-size: 60px;
+      color: black;
+      font-family: 'LatoBlack', sans-serif;
+      ;
+      word-spacing: 8px;
+  
+      @include mobile {
+        position: relative;
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    }
+  
+  }
+  
+  .page__subtitle--chapteral {
+    text-transform: none;
+    font-size: 25px;
+    font-family: 'LatoBlack', sans-serif;
+  
+    @include mobile {
+      font-size: 1.5rem
+    }
+  }
+  
+  .page__subtitle--central {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .adres {
+    margin-left: $pageItemLeftSpace;
+  
+    &__form {
+      display: flex;
+      flex-direction: column;
+      width: 180px;
+  
+      & * {
+        margin: 5px 0
+      }
+    }
+  
+    &__btn {
+      position: relative
+    }
+  }
+  
+  .page--kontakt-header {
+    @include flexHorizontalCentered();
+    width: 100%
+  }
+  
+  .page__column--adresal {
+    @include flexHorizontalCentered();
+  }
+ 
