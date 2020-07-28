@@ -1,237 +1,230 @@
-
 .slideshow {
-    overflow: hidden;
-    position: relative;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+
+  .slideshow-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+  }
+
+  .slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 1;
-  
-    .slideshow-inner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+  }
+
+  .slide {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &.is-active {
+      display: block;
     }
-  
-    .slides {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
+
+    &.is-loaded {
+      opacity: 1;
     }
-  
-    .slide {
-      display: none;
-      overflow: hidden;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-  
-      &.is-active {
-        display: block;
+
+    .caption {
+      padding: 20px 20px;
+      color: $localgreen;
+      max-width: 360px;
+      position: relative;
+      border-radius: 5px;
+      margin-left: 10%;
+
+      @include mobile {
+        margin: 0 10%;
       }
-  
-      &.is-loaded {
-        opacity: 1;
-      }
-  
-      .caption {
-  
-        padding: 20px 20px;
-        color: $localgreen;
-        max-width: 360px;
-        position: relative;
+
+      -webkit-box-shadow: 1px 1px 37px 6px #000000;
+      box-shadow: 1px 1px 37px 6px #000000;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
         border-radius: 5px;
-        margin-left: 10%;
-  
-        @include mobile {
-          margin: 0 10%
-        }
-  
-        -webkit-box-shadow: 1px 1px 37px 6px #000000;
-        box-shadow: 1px 1px 37px 6px #000000;
-  
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          background: rgba(0, 0, 0, 0.5);
-          border-radius: 5px;
-          width: 100%;
-          height: 100%;
-          z-index: -1;
-        }
-  
-      }
-  
-      .image-container {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
         height: 100%;
-        background-position: center;
-        z-index: 1;
-        background-size: cover;
-        image-rendering: optimizeQuality;
-  
-        &::before {
-          content: "";
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.2);
-        }
-      }
-  
-      .image {
-        width: 100%;
-        object-fit: cover;
-        height: 100%;
-      }
-  
-      &-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        color: #fff;
-        text-align: center;
-        @include flexVerticalCentered();
-        justify-content: start; // bylo center
-  
-      }
-  
-      .title {
-        margin: 0 auto 15px;
-        max-width: 700px;
-        font: 900 50px/1.2 "LatoBlack", sans-serif;
-        letter-spacing: 0.1em;
-  
-        @media (max-width:768px) {
-          font-size: 5vw;
-        }
-  
-      }
-  
-      .text {
-        margin: 0 auto;
-        max-width: 1000px;
-        font-size: 14px;
-        line-height: 1.4;
-  
-      }
-  
-      .btn {
-        margin: 15px 0 0;
-        border-color: $localgreen;
-  
-        &::before {
-          background: $localgreen;
-        }
+        z-index: -1;
       }
     }
-  
-    .pagination {
+
+    .image-container {
       position: absolute;
-      bottom: 35px;
+      top: 0;
       left: 0;
       width: 100%;
-      height: 12px;
-      cursor: default;
-      z-index: 2;
-      text-align: center;
-  
-      .item {
-        display: inline-block;
-        padding: 15px 5px;
-        position: relative;
-        width: 46px;
-        height: 32px;
-        cursor: pointer;
-        text-indent: -999em;
-        z-index: 1;
-  
-        +.page {
-          margin-left: -2px;
-        }
-  
-        &::before {
-          content: "";
-          display: block;
-          position: absolute;
-          top: 15px;
-          left: 5px;
-          width: 36px;
-          height: 2px;
-          background: $localgreen;
-          transition: background 0.2s ease;
-        }
-  
-        &::after {
-          width: 0;
-          background: #fff;
-          z-index: 2;
-          transition: width 0.2s ease;
-        }
-  
-        &:hover::before,
-        &.is-active::before {
-          background-color: #fff;
-        }
+      height: 100%;
+      background-position: center;
+      z-index: 1;
+      background-size: cover;
+      image-rendering: optimizeQuality;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
       }
     }
-  
-    .arrows {
-      .arrow {
-        margin: -33px 0 0;
-        padding: 2px;
-        position: absolute;
-        top: 50%;
-        cursor: pointer;
-        z-index: 3;
+
+    .image {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+
+    &-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      color: #fff;
+      text-align: center;
+      @include flexVerticalCentered();
+      justify-content: start; // bylo center
+    }
+
+    .title {
+      margin: 0 auto 15px;
+      max-width: 700px;
+      font: 900 50px/1.2 "LatoBlack", sans-serif;
+      letter-spacing: 0.1em;
+
+      @media (max-width: 768px) {
+        font-size: 5vw;
       }
-  
-      .prev {
-        left: 1vw;
-  
-        &:hover .svg {
-          left: -10px;
-        }
-      }
-  
-      .next {
-        right: 1vw;
-  
-        &:hover .svg {
-          left: 10px;
-        }
-      }
-  
-      .svg {
-        position: relative;
-        left: 0;
-        width: 14px;
-        height: 26px;
-        fill: #fff;
-        transition: left 0.2s ease;
+    }
+
+    .text {
+      margin: 0 auto;
+      max-width: 1000px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .btn {
+      margin: 15px 0 0;
+      border-color: $localgreen;
+
+      &::before {
+        background: $localgreen;
       }
     }
   }
-  
+
+  .pagination {
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    cursor: default;
+    z-index: 2;
+    text-align: center;
+
+    .item {
+      display: inline-block;
+      padding: 15px 5px;
+      position: relative;
+      width: 46px;
+      height: 32px;
+      cursor: pointer;
+      text-indent: -999em;
+      z-index: 1;
+
+      + .page {
+        margin-left: -2px;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 5px;
+        width: 36px;
+        height: 2px;
+        background: $localgreen;
+        transition: background 0.2s ease;
+      }
+
+      &::after {
+        width: 0;
+        background: #fff;
+        z-index: 2;
+        transition: width 0.2s ease;
+      }
+
+      &:hover::before,
+      &.is-active::before {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .arrows {
+    .arrow {
+      margin: -33px 0 0;
+      padding: 2px;
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    .prev {
+      left: 1vw;
+
+      &:hover .svg {
+        left: -10px;
+      }
+    }
+
+    .next {
+      right: 1vw;
+
+      &:hover .svg {
+        left: 10px;
+      }
+    }
+
+    .svg {
+      position: relative;
+      left: 0;
+      width: 14px;
+      height: 26px;
+      fill: #fff;
+      transition: left 0.2s ease;
+    }
+  }
+}

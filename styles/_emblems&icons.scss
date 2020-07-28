@@ -1,45 +1,44 @@
 .bg-slideshow {
-    width: 24px;
-    height: 24px;
-    background: url('../images/details.png') -10px -10px;
+  width: 24px;
+  height: 24px;
+  background: url("../images/details.png") -10px -10px;
 }
 
 .bg-exit {
-    width: 24px;
-    height: 24px;
-    background: url('../images/details.png') -54px -10px;
+  width: 24px;
+  height: 24px;
+  background: url("../images/details.png") -54px -10px;
 }
 
 .bg-facebook {
-    width: 24px;
-    height: 24px;
-    background: url('../images/details.png') -10px -54px;
+  width: 24px;
+  height: 24px;
+  background: url("../images/details.png") -10px -54px;
 }
 
 .bg-hamburger {
-    width: 24px;
-    height: 24px;
-    background: url('../images/details.png') -54px -54px;
+  width: 24px;
+  height: 24px;
+  background: url("../images/details.png") -54px -54px;
 }
 
 .bg-instagram {
-    width: 24px;
-    height: 24px;
-    background: url('../images/details.png') -98px -10px;
+  width: 24px;
+  height: 24px;
+  background: url("../images/details.png") -98px -10px;
 }
 
 .bg-intro {
-    width: 24px;
-    height: 24px;
-    background: url('../images/details.png') -98px -54px;
+  width: 24px;
+  height: 24px;
+  background: url("../images/details.png") -98px -54px;
 }
 
 .bg-location {
-    width: 24px;
-    height: 24px;
-    background: url('../images/details.png') -10px -98px;
+  width: 24px;
+  height: 24px;
+  background: url("../images/details.png") -10px -98px;
 }
-
 
 .emblems-baza,
 .emblems-dietetyka,
@@ -49,49 +48,49 @@
 .emblems-onas,
 .emblems-rehabilitacja,
 .emblems-rehabilitacjasportowa {
-    max-width: 100%;
-    background-size: 100%;
-    background-image: url('../images/emblems.png');
+  max-width: 100%;
+  background-size: 100%;
+  background-image: url("../images/emblems.png");
 }
 
 .emblems-baza {
-    background-position: 0 0%;
-    background-size: 100%;
+  background-position: 0 0%;
+  background-size: 100%;
 }
 
 .emblems-dietetyka {
-    background-position: 0 13.901345%;
-    background-size: 100%;
+  background-position: 0 13.901345%;
+  background-size: 100%;
 }
 
 .emblems-ergonomia {
-    background-position: 0 27.802691%;
-    background-size: 100%;
+  background-position: 0 27.802691%;
+  background-size: 100%;
 }
 
 .emblems-masazsportowy {
-    background-position: 0 41.704036%;
-    background-size: 100%;
+  background-position: 0 41.704036%;
+  background-size: 100%;
 }
 
 .emblems-massage {
-    background-position: 0 55.605381%;
-    background-size: 100%;
+  background-position: 0 55.605381%;
+  background-size: 100%;
 }
 
 .emblems-onas {
-    background-position: 0 69.506726%;
-    background-size: 100%;
+  background-position: 0 69.506726%;
+  background-size: 100%;
 }
 
 .emblems-rehabilitacja {
-    background-position: 0 83.408072%;
-    background-size: 100%;
+  background-position: 0 83.408072%;
+  background-size: 100%;
 }
 
 .emblems-rehabilitacjasportowa {
-    background-position: 0 100%;
-    background-size: 100%;
+  background-position: 0 100%;
+  background-size: 100%;
 }
 
 .page-ergonomy,
@@ -102,47 +101,47 @@
 .page-sportmassage,
 .page-sportrehab,
 .page-dieta {
-    max-width: 100%;
-    background-size: 100%;
-    background-image: url('../images/page.webp');
+  max-width: 100%;
+  background-size: 100%;
+  background-image: url("../images/page.webp");
 }
 
 .page-ergonomy {
-    background-position: 0 0%;
-    background-size: 100%;
+  background-position: 0 0%;
+  background-size: 100%;
 }
 
 .page-knowledge {
-    background-position: 0 16.558442%;
-    background-size: 100%;
+  background-position: 0 16.558442%;
+  background-size: 100%;
 }
 
 .page-massage {
-    background-position: 0 30.931825%;
-    background-size: 100%;
+  background-position: 0 30.931825%;
+  background-size: 100%;
 }
 
 .page-onas {
-    background-position: 0 45.631641%;
-    background-size: 100%;
+  background-position: 0 45.631641%;
+  background-size: 100%;
 }
 
 .page-rehab {
-    background-position: 0 59.757898%;
-    background-size: 100%;
+  background-position: 0 59.757898%;
+  background-size: 100%;
 }
 
 .page-sportmassage {
-    background-position: 0 72.320139%;
-    background-size: 100%;
+  background-position: 0 72.320139%;
+  background-size: 100%;
 }
 
 .page-sportrehab {
-    background-position: 0 85.857691%;
-    background-size: 100%;
+  background-position: 0 85.857691%;
+  background-size: 100%;
 }
 
 .page-dieta {
-    background-position: 0 100%;
-    background-size: 100%;
+  background-position: 0 100%;
+  background-size: 100%;
 }

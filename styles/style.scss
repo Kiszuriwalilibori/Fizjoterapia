@@ -1,8 +1,8 @@
-@import 'reset';
-@import 'variables';
-@import 'fonts';
-@import 'mixins';
-@import 'button';
+@import "reset";
+@import "variables";
+@import "fonts";
+@import "mixins";
+@import "button";
 
 html {
   font-size: 16px;
@@ -18,9 +18,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
-@import 'slideshow';
-@import 'header';
-@import 'intro';
+@import "slideshow";
+@import "header";
+@import "intro";
 
 .sticky {
   top: 0;
@@ -31,16 +31,15 @@ body {
   padding: 0 20px;
   color: #989898;
 }
-@import 'menu';
-@import 'page';
-@import 'footer';
-@import 'bazawiedzy';
-
+@import "menu";
+@import "page";
+@import "footer";
+@import "bazawiedzy";
 
 .successStyle {
   @extend .btn;
   border-color: $localgreen;
-  color: $localgreen
+  color: $localgreen;
 }
 
 .failureStyle {
@@ -53,4 +52,4 @@ body {
   @include flexHorizontalCentered;
 }
 
-@import 'emblems&icons';
+@import "emblems&icons";
