@@ -19,29 +19,56 @@ $(document).ready(function () {
     $("#onas").addClass("is-active");
   })();
 
-  var startHamburgerMenu = (function () {
-    var menu = (function () {
-      const isHidden = true;
-      return {
-        isHidden: function () {
-          return isHidden;
-        },
-        toggle: function () {
-          isHidden = !isHidden;
-        },
-      };
-    })();
+  // var startHamburgerMenu = (function () {
+  //   var menu = (function () {
+  //     const isHidden = true;
+  //     return {
+  //       isHidden: function () {
+  //         return isHidden;
+  //       },
+  //       toggle: function () {
+  //         isHidden = !isHidden;
+  //       },
+  //     };
+  //   })();
 
+  //   function toggleClassMenu() {
+  //     if (menu.isHidden()) {
+  //       TweenMax.to(".menu", 1, { xPercent: 100, ease: Power2.easeInOut, onComplete: menu.toggle });
+  //     } else {
+  //       TweenMax.to(".menu", 1, { xPercent: -100, ease: Power2.easeInOut, onComplete: menu.toggle });
+  //     }
+  //   }
+
+  //   $(".hamburger").on("click", toggleClassMenu);
+  // })();
+
+  var startHamburgerMenu = (function () {
+   
+    function prepareForHamburger(){
+      $("#menu").addClass("visibleWithHamburger");
+    }
+
+    function clearAfterHamburger(){
+      $("#menu").removeClass("visibleWithHamburger");
+      $("#menu").removeAttr("style");
+    }
     function toggleClassMenu() {
-      if (menu.isHidden()) {
-        TweenMax.to(".menu", 1, { xPercent: 100, ease: Power2.easeInOut, onComplete: menu.toggle });
+      if (!($("#menu").hasClass("visibleWithHamburger"))){
+        TweenMax.to(".menu", 1, { xPercent: 100, ease: Power2.easeInOut, onComplete: prepareForHamburger });
       } else {
-        TweenMax.to(".menu", 1, { xPercent: -100, ease: Power2.easeInOut, onComplete: menu.toggle });
+        TweenMax.to(".menu", 1, { xPercent: -100, ease: Power2.easeInOut, onComplete: clearAfterHamburger });
+        $("#menu").removeClass("visibleWithHamburger");
       }
     }
 
     $(".hamburger").on("click", toggleClassMenu);
   })();
+
+
+
+  
+
 
   var createKonwledgeBase = (function () {
     var articlesOurs = [

@@ -40,4 +40,6 @@ The following tools and resources has been used while developing Google Books
 
  - revise all, with special attention to styles
  - load fonts from local sources for performance
- - check thoroughly on real mobiles"# fizjokopia" 
+ - check thoroughly on real mobiles"# fizjokopia"
+ - better hamburger icon
+ - hamburger button should be desactivated when animation runs
