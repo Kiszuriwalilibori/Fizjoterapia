@@ -23,7 +23,6 @@ module.exports = {
         ];
 
         const knowledgeChapters = [...$("#bazawiedzy .page__chapter")];
-
         const knowledgeOurs = knowledgeChapters[0];
 
         articlesOurs.forEach((element) => {
@@ -39,6 +38,7 @@ module.exports = {
             div.classList.add("bazawiedzy-text");
             div.innerHTML = `<h3 class ='bazawiedzy__header'>${element.h}</h3><span>${element.text}</span>`;
             knowledgeExternals.appendChild(div);
+            
         });
     }
 }

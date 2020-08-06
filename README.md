@@ -33,13 +33,12 @@ The following tools and resources has been used while developing Google Books
 - added sending emails by Enformed
 - support for calling when pressed on phone number on mobile devices
 #### 1.02
-- more compact JS, better for clearing
+- more compact JS, better form clearing
 
 
 ### Todos
 
  - revise all, with special attention to styles
- - load fonts from local sources for performance
  - check thoroughly on real mobiles"# fizjokopia"
- - better hamburger icon
  - hamburger button should be desactivated when animation runs
+ - 'Więcej' buttons could also work with js fn and not link

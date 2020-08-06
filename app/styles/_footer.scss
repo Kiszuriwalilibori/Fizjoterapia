@@ -22,6 +22,7 @@
     margin: 0 10px;
     width: 24px;
     height: 24px;
+    &:hover,&:focus{animation: rotate 2s infinite linear;}
   }
 
   &__icon {

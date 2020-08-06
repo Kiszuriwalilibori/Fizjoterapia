@@ -80,11 +80,9 @@
   color: black;
   text-decoration: none;
   transition: color 0.3s ease-out;
-
-  &:hover {
-    color: rgb(117, 175, 40);
-  }
-
+  cursor: pointer;
+  @include getGreen;
+  
   &:link {
     text-decoration: none;
     color: black;
@@ -104,6 +102,7 @@
     background-color: $localgreen;
     animation: menuitemline 1s ease-in-out forwards;
   }
+  & span{color: $localgreen;}
 }
 
 @keyframes menuitemline {
@@ -124,11 +123,18 @@
   right: 3vw;
   z-index: 2000;
   cursor: pointer;
+  & .hamburger-itself:hover, .hamburger-itself:focus {
+      animation: rotate 2s infinite linear;
+    }
 
-  & div {
-    transform: scale(2);
+  @keyframes rotate {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
   }
-
   @media (min-width: 768px) {
     display: none;
   }

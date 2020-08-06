@@ -145,6 +145,10 @@ a:focus {
   outline: none;
 }
 
+:focus {
+  outline: none;
+}
+
 @font-face {
   font-family: Clicker;
   src: url(../fonts/Clicker.ttf);
@@ -755,6 +759,8 @@ body {
   text-decoration: none;
   -webkit-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
+  cursor: pointer;
+  transition: color 0.3s ease-out;
 }
 
 .menu__item span:hover {
@@ -778,6 +784,10 @@ body {
   background-color: #75af28;
   -webkit-animation: menuitemline 1s ease-in-out forwards;
           animation: menuitemline 1s ease-in-out forwards;
+}
+
+.menu__item--hover span {
+  color: #75af28;
 }
 
 @-webkit-keyframes menuitemline {
@@ -891,9 +901,27 @@ body {
   cursor: pointer;
 }
 
-.hamburger div {
-  -webkit-transform: scale(2);
-          transform: scale(2);
+.hamburger .hamburger-itself:hover, .hamburger .hamburger-itself:focus {
+  -webkit-animation: rotate 2s infinite linear;
+          animation: rotate 2s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @media (min-width: 768px) {
@@ -1156,6 +1184,11 @@ body {
 
 .footer__link:link {
   text-decoration: none;
+}
+
+.footer__link:hover, .footer__link:focus {
+  -webkit-animation: rotate 2s infinite linear;
+          animation: rotate 2s infinite linear;
 }
 
 .footer__icon {
