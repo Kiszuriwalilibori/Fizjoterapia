@@ -3,6 +3,12 @@
     @content;
   }
 }
+@mixin desktop {
+  @media (min-width: $breakMobile) {
+    @content;
+  }
+}
+
 
 @mixin hoveringToGreen {
   text-decoration: none;

@@ -23,13 +23,18 @@
   }
 
   & li {
-    display: inline-block;
+    //display: inline-block;
+    display: inline-flex;
+    height:100%;///
     position: relative;
     text-align: center;
-    padding: 15px 0;
+    //padding: 15px 0;
+    align-items:center;
 
     @include mobile {
-      margin: -4px 0;
+      //margin: -4px 0;
+      padding: 4px 0;
+      justify-content:center;
     }
   }
 
@@ -90,6 +95,7 @@
 }
 
 .menu__item--hover {
+  @include desktop{
   &::after {
     content: "";
     height: 4px;
@@ -102,6 +108,7 @@
     background-color: $localgreen;
     animation: menuitemline 1s ease-in-out forwards;
   }
+}
   & span{color: $localgreen;}
 }
 

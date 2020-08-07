@@ -33,7 +33,9 @@ The following tools and resources has been used while developing Google Books
 - added sending emails by Enformed
 - support for calling when pressed on phone number on mobile devices
 #### 1.02
-- more compact JS, better form clearing
+- more compact JS, better form 
+#### 1.03
+- navigable with keyboard
 
 
 ### Todos
