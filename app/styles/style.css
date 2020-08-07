@@ -747,10 +747,15 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-right: 0px;
     padding: 10px 0;
   }
@@ -759,6 +764,9 @@ body {
   }
   .menu li {
     padding: 0;
+    width: 120px;
+    margin: 4px 10%;
+    border: 1px solid #75af28;
   }
 }
 

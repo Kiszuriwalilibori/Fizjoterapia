@@ -18,10 +18,11 @@ module.exports = {
     const menuItems = document.getElementsByClassName("menu__item");
 
     function changeLocation(ev) {
-      const targ = ev.currentTarget.dataset.target;
-      if (targ) {
-        location.hash = targ;
-        const item = document.getElementById(targ);
+      const target = ev.currentTarget.dataset.target;
+      if (target) {
+        location.hash ="";
+        location.hash = target;
+        const item = document.getElementById(target);
         const style = item.currentStyle || window.getComputedStyle(item);
         const marginTop = parseInt(style.marginTop, 10);
         const shift = marginTop + menu.clientHeight;
