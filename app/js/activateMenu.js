@@ -1,3 +1,5 @@
+const { mountClickAndEnterHandler, throttled } = require("./lib");
+
 module.exports = {
   activateMenu: function (jQuery) {
     var $ = jQuery;
@@ -18,7 +20,9 @@ module.exports = {
     const menuItems = document.getElementsByClassName("menu__item");
 
     function changeLocation(ev) {
-      const target = ev.currentTarget.dataset.target;
+      
+      const target = ev.target.dataset.target;
+
       if (target) {
         location.hash ="";
         location.hash = target;
@@ -29,17 +33,17 @@ module.exports = {
         window.scrollBy(0, -shift);
       } else console.log("event location has not valid dataset");
     }
+    Array.prototype.forEach.call(menuItems, (item) => mountClickAndEnterHandler(item, throttled(changeLocation, 1000)));
+    // changeLocation = typeof throttle !== "undefined" ? throttle(changeLocation, 500) : changeLocation;
 
-    changeLocation = typeof throttle !== "undefined" ? throttle(changeLocation, 500) : changeLocation;
-
-    Array.prototype.forEach.call(menuItems, (item) => {
-      item.addEventListener("click", changeLocation);
-      item.addEventListener("keyup", function (event) {
-        if (event.keyCode === 13) {
-          event.preventDefault();
-          changeLocation(event);
-        }
-      });
-    });
+    // Array.prototype.forEach.call(menuItems, (item) => {
+    //   item.addEventListener("click", changeLocation);
+    //   item.addEventListener("keyup", function (event) {
+    //     if (event.keyCode === 13) {
+    //       event.preventDefault();
+    //       changeLocation(event);
+    //     }
+    //   });
+    // });
   },
 };
