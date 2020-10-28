@@ -32,7 +32,7 @@ module.exports = {
 };
 
 },{}],2:[function(require,module,exports){
-const { mountClickAndEnterHandler, throttled } = require("./lib");
+const { mountClickAndEnterHandler, throttled, getAttributeValue } = require("./lib");
 
 module.exports = {
   activateMenu: function (jQuery) {
@@ -60,10 +60,7 @@ module.exports = {
       if (target) {
         location.hash ="";
         location.hash = target;
-        const item = document.getElementById(target);
-        const style = item.currentStyle || window.getComputedStyle(item);
-        const marginTop = parseInt(style.marginTop, 10);
-        const shift = marginTop + menu.clientHeight;
+        const shift = getAttributeValue(target,'marginTop') + menu.clientHeight;
         window.scrollBy(0, -shift);
       } else console.log("event location has not valid dataset");
     }
@@ -191,7 +188,32 @@ function isNode(o) {
   return typeof Node === "object" ? o instanceof Node : o && typeof o === "object" && typeof o.nodeType === "number" && typeof o.nodeName === "string";
 }
 
+function reportError(err) {
+  try {
+    if (!err instanceof Error) {
+      throw new Error("it is not error object");
+    }
+    console.error(err.name, "\n", "\n", err.message, "\n", "\n", err.stack);
+  } catch (e) {
+    console.log(e.message);
+  }
+}
+
+function getAttributeValue(target, attr) {
+  
+    const item = document.getElementById(target);
+    if(item){
+    const style = item.currentStyle || window.getComputedStyle(item);
+    return style[attr] ? parseInt(style[attr], 10) : 0;
+  } else {
+    return 0;
+  }
+}
+
 module.exports = {
+  isNode: isNode,
+  reportError: reportError,
+  getAttributeValue: getAttributeValue,
   mountClickAndEnterHandler: function mountClickAndEnterHandler(item, fn) {
     try {
       if (!isNode(item)) {
@@ -210,8 +232,12 @@ module.exports = {
           fn(event);
         }
       });
+
+      if (item.toUpperCase !== "BUTTON" && !item.hasAttribute("tabindex")) {
+        item.setAttribute("tabindex", "0");
+      }
     } catch (err) {
-      console.log(`${arguments.callee.name} function error: ${err.message}`);
+      reportError(err);
     }
   },
   throttled: function throttled(fn, delay) {

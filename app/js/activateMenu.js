@@ -1,4 +1,4 @@
-const { mountClickAndEnterHandler, throttled } = require("./lib");
+const { mountClickAndEnterHandler, throttled, getAttributeValue } = require("./lib");
 
 module.exports = {
   activateMenu: function (jQuery) {
@@ -26,10 +26,7 @@ module.exports = {
       if (target) {
         location.hash ="";
         location.hash = target;
-        const item = document.getElementById(target);
-        const style = item.currentStyle || window.getComputedStyle(item);
-        const marginTop = parseInt(style.marginTop, 10);
-        const shift = marginTop + menu.clientHeight;
+        const shift = getAttributeValue(target,'marginTop') + menu.clientHeight;
         window.scrollBy(0, -shift);
       } else console.log("event location has not valid dataset");
     }
