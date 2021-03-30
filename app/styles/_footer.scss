@@ -6,7 +6,7 @@
   left: 0;
   z-index: 1000;
   width: 100%;
-  height: 60px;
+  min-height: 60px;
   @include tileBackground();
   background-repeat: repeat;
   color: $localgreen;
@@ -19,7 +19,7 @@
     color: white;
     display: inline-block;
     @include hoveringToGreen();
-    margin: 0 10px;
+    margin: 10px 10px;
     width: 24px;
     height: 24px;
     &:hover,&:focus{animation: rotate 2s infinite linear;}
